@@ -1,0 +1,4 @@
+<commands>
+    <command name='1'>dir</command>
+    <command name='2'>echo You Are Welcome</command>
+</commands>

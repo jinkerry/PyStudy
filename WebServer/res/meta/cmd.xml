@@ -1,0 +1,4 @@
+<commands>
+    <command name='hello'>echo hello</command>
+    <command name='world'>echo world</command>
+</commands>

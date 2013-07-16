@@ -18,12 +18,8 @@ def auth():
     resp = urllib2.urlopen(url)
     print resp
 
-    # action = '/oauth2/authorize?redirect_uri=https;//github.com/jinkerry&response_type=code&client_id=1081233493'
-    # conn = httplib.HTTPSConnection('api.weobo.com')
-    # conn.request('post', action)
-    # resp = conn.getresponse()
 
-def fwb():
+def send_microblog():
     code = 'eceb8e3ebc772f931f86ba1398c63de2'
     client = APIClient(app_key=app_key, app_secret=app_secret, redirect_uri=callback_url)
     r = client.request_access_token(code)
@@ -39,4 +35,4 @@ def fwb():
 if __name__ == "__main__":
     print 'begin'
     auth()
-    #fwb()
+    send_mircoblog()

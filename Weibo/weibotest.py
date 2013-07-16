@@ -16,7 +16,8 @@ def auth():
     print url
 
     resp = urllib2.urlopen(url)
-    print resp
+    print resp.read()
+    print resp.geturl()
 
 
 def send_microblog():
@@ -35,4 +36,4 @@ def send_microblog():
 if __name__ == "__main__":
     print 'begin'
     auth()
-    send_mircoblog()
+    send_microblog()

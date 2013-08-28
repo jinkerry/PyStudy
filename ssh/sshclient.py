@@ -13,7 +13,7 @@ def dssconnect():
     username = 'jinfeng'
     
     ssh_client = paramiko.SSHClient()
-    mykey = paramiko.DSSKey.from_private_key_file('e:/jinfeng/key/jinfeng',password='jin169')
+    mykey = paramiko.DSSKey.from_private_key_file('e:/jinfeng/key/jinfeng',password='xxxxxx')
     ssh_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
     ssh_client.connect(hostname=host, port=port, username=username, pkey=mykey)
     stdin, stdout, stderr = ssh_client.exec_command('pwd')

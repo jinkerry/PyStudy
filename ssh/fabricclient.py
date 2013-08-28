@@ -7,7 +7,7 @@ env.hosts = ['qa26.server.163.org']
 env.port = 1046
 env.user = 'jinfeng' 
 env.key_filename = ['E:/jinfeng/key/jinfeng']
-env.password = 'jin169'           
+env.password = 'xxxxxx'
 
 
 def show_config():

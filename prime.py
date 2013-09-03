@@ -1,6 +1,7 @@
 __author__ = 'jinfeng'
 
 import math
+import datetime
 
 def isPrimeNumber(n):
     if (n < 2):
@@ -14,7 +15,7 @@ def isPrimeNumber(n):
     return True
 
 def getPrimeNumberBy(n):
-    i, j = 1
+    i, j = 1, 1
     result = 1
     while(j < n):
         if (isPrimeNumber(i)):
@@ -24,5 +25,7 @@ def getPrimeNumberBy(n):
     return result
 
 if __name__ == "__main__":
+    start = datetime.datetime.now()
     print getPrimeNumberBy(10001)
+    print datetime.datetime.now() - start
 

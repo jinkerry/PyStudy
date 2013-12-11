@@ -16,7 +16,7 @@ def pocker_sequence(suits, numbers):
 			num = len(numbers) - 1
 			count = 0
 			for i in range(0, num):
-				if abs(numbers[i] - numbers[i+1]) > 1:
+				if abs(numbers[i] - numbers[i+1]) <> 1:
 					print 'not sequence', numbers
 				else:
 					count = count + 1

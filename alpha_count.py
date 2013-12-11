@@ -9,9 +9,10 @@ def ab_count(str):
 
 	res = list(set(result))
 	res.sort(key = result.index)
-	print res
+	print 'char count index'
+	for re in res:
+		print re
 
 if __name__ == '__main__':
 	s = 'abcdaabcffg'
-	print 'char count index'
 	ab_count(s)

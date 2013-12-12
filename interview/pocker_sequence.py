@@ -26,7 +26,7 @@ def pocker_sequence(suits, numbers):
 			for i in range(start, num):
 				diff = numbers[i+1] - numbers[i] - 1
 				#if has joke, and first is A
-				if (numbers[i]) == 1:
+				if (numbers[i] == 1) and (diff >= 8):
 					diff = diff - 8
 				sum = sum + diff
 			#normal exit loop, jokes more euqal than sum of diff		
@@ -37,5 +37,5 @@ def pocker_sequence(suits, numbers):
 
 if __name__ == '__main__':
 	suits = ['heart', 'heart', 'heart', 'joke', 'joke']
-	numbers = [10,11,13,12,9]
+	numbers = [1,11,13,0,0]
 	pocker_sequence(suits, numbers)

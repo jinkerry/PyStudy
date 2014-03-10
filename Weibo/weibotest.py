@@ -1,8 +1,5 @@
-import urllib2
-
 __author__ = 'jinfeng'
 
-import sys
 from weibo import APIClient
 
 app_key = '1081233493'
@@ -15,6 +12,7 @@ def auth():
     url = client.get_authorize_url()
     print url
 
+
 def send_microblog():
     f = open('code.txt', 'r')
     code = f.readline()
@@ -24,6 +22,7 @@ def send_microblog():
     client = APIClient(app_key=app_key, app_secret=app_secret, redirect_uri=callback_url)
     r = client.request_access_token(code)
     access_token = r.access_token
+    print 'access token: ', access_token
     expires_in = r.expires_in
 
     client.set_access_token(access_token, expires_in)
@@ -32,7 +31,6 @@ def send_microblog():
 
 
 if __name__ == "__main__":
-    print 'begin'
     auth()
-    raw_input('Click the URL, the press any key to continue...')
+    raw_input('Click the URL to authorize, then press any key to continue...')
     send_microblog()

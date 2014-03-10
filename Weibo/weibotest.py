@@ -1,6 +1,7 @@
 __author__ = 'jinfeng'
 
 from weibo import APIClient
+import webbrowser
 
 app_key = '1081233493'
 app_secret = '39ae50fa6a13270893fe26cfbcaeadd1'
@@ -11,6 +12,7 @@ def auth():
     client = APIClient(app_key=app_key, app_secret=app_secret, redirect_uri=callback_url)
     url = client.get_authorize_url()
     print url
+    webbrowser.open_new_tab(url)
 
 
 def send_microblog():

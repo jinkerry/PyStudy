@@ -17,7 +17,6 @@ def clean_file(user_dir='.'):
                 sum += size
             else:
                 pass
-                os.system("")
     print 'count: ', count
     print 'sum: ', sum
 

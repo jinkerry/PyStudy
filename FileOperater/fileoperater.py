@@ -4,22 +4,20 @@ __author__ = 'jinfeng'
 import os
 
 
-def clean_file(root='.'):
+def clean_file(user_dir='.'):
     count = 0
     sum = 0
-    dirs = os.listdir(root)
-    for dir in dirs:
-        name = root + '/' + dir
-        if os.path.isfile(name):
-            if name.find('.trash') > -1:
-                size = os.stat(name).st_size
-                os.remove(name)
+    for root, dirs, files in os.walk(user_dir):
+        for file in files:
+            if file.endswith('.trash'):
+                full_filename = os.path.join(root, file)
+                size = os.path.getsize(full_filename)
+                os.remove(full_filename)
                 count += 1
                 sum += size
-                print 'file: ', unicode(name, 'gbk'), size
-        else:
-            #sub dir skip
-            pass
+            else:
+                pass
+                os.system("")
     print 'count: ', count
     print 'sum: ', sum
 

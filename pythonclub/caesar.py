@@ -9,6 +9,9 @@ def caesar():
               "sqgle qrpgle.kyicrpylq() gq pcamkkclbcb. lmu ynnjw ml rfc spj."
     t = string.maketrans('abcdefghijklmnopqrstuvwzyz', 'cdefghijklmnopqrstuvwzyzab')
     print original.translate(t)
+    
+    secret = 'map'
+    print secret.translate(t)
 
 if __name__ == '__main__':
     caesar()
